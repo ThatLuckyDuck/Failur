@@ -1,16 +1,15 @@
-# bot.py
 import os
 
 import discord
 from dotenv import load_dotenv
 
 load_dotenv()
-TOKEN = os.getenv('NjkzNTUwMDU2NjI4MDI3NDc1.Xn_vJA.1Sh7sJmWXQ_GDtRiLnQJZX9En2k')
+TOKEN = os.getenv('DISCORD_TOKEN')
 
 client = discord.Client()
 
 @client.event
 async def on_ready():
-  print(f'{client.user} has booted up!')
-  
+    print(f'{client.user} has connected to Discord!')
+
 client.run(TOKEN)
